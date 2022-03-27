@@ -1,0 +1,11 @@
+[package]
+name = "lumidb-core"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+jsonrpc-core = { version = "18.0.0"}
+jsonrpc-server-utils = { version = "18.0.0" }
+jsonrpc-http-server = { version = "18.0.0" }
