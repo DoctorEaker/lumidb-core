@@ -1,7 +1,10 @@
+mod modules;
+
 use jsonrpc_core::*;
 use jsonrpc_http_server::*;
 use dotenv::dotenv;
 use std::env;
+use crate::modules::db::*;
 
 fn main() {
     dotenv().ok();
