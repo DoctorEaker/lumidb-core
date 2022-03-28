@@ -1,2 +1,9 @@
 /target
 /.Cargo.toml.~undo-tree~
+*.env
+/..env.~undo-tree~
+*~
+*.~undo-tree
+/src/.main.rs.~undo-tree~
+*.~undo-tree~
+

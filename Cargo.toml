@@ -9,3 +9,4 @@ edition = "2021"
 jsonrpc-core = { version = "18.0.0"}
 jsonrpc-server-utils = { version = "18.0.0" }
 jsonrpc-http-server = { version = "18.0.0" }
+dotenv = { version = "0.15.0" }
