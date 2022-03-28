@@ -2,3 +2,4 @@
 /.Cargo.toml.~undo-tree~
 *.env
 /..env.~undo-tree~
+/*~
