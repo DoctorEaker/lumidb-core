@@ -4,6 +4,7 @@ use jsonrpc_core::*;
 use jsonrpc_http_server::*;
 use dotenv::dotenv;
 use std::env;
+//use crate::modules::*;
 use crate::modules::db::*;
 
 fn main() {
@@ -18,6 +19,13 @@ fn main() {
     io.add_sync_method("say_hello", move |_: Params| {
         Ok(Value::String(name.clone().unwrap()))
     });
+
+    let mut db = DB::new();
+
+    db.set(&"magic".to_string(), "magic_value".to_string());
+
+    let response = db.get(&"magic".to_string());
+    //println!("{}",response);
 
     let _server = ServerBuilder::new(io)
         .start_http(&url.parse().unwrap())
