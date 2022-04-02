@@ -7,10 +7,10 @@ pub struct Element {
 }
 
 impl Element {
-    pub fn new(value: String) -> Element{
+    pub fn new(value: String) ->  Element{
         let mut values: Vec<String> = Vec::new();
         values.push(value);
-        let mut version = 0;
+        let version = 0;
         Element {
             values,
             version,
@@ -18,10 +18,14 @@ impl Element {
     }
 
     pub fn insert(&mut self, value:String){
-        self.values.push(value);
+        &self.values.push(value);
     }
 
-    pub fn get(&self) -> &Element{
+    pub fn get(&self) ->  &Element{
+        return self;
+    }
+
+    pub fn get_mut(&mut self) -> &mut Element{
         return self;
     }
 
@@ -31,5 +35,9 @@ impl Element {
         //println!("Getting all values asociated with a key");
 
         return values;
+    }
+
+    pub fn delete(&mut self, index:usize){
+        self.values.remove(index);
     }
 }

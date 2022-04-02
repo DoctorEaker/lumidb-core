@@ -23,8 +23,13 @@ fn main() {
     let mut db = DB::new();
 
     db.set(&"magic".to_string(), "magic_value".to_string());
+    println!("mv");
+    db.set(&"magic".to_string(), "magic2".to_string());
+    println!("m2");
 
-    let response = db.get(&"magic".to_string());
+    db.delete_at_index(&"magic".to_string(),0);
+
+    let _response = db.serialize(&"magic".to_string());
     //println!("{}",response);
 
     let _server = ServerBuilder::new(io)
